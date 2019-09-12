@@ -58,4 +58,3 @@ def delete_task(request, pk):
         job.delete()
         return redirect('home')
 
-    #will need to work later
