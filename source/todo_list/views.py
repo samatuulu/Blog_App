@@ -57,3 +57,5 @@ def delete_task(request, pk):
     elif request.method == 'POST':
         job.delete()
         return redirect('home')
+
+    #will need to work later
