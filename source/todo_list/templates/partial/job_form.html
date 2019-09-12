@@ -1,0 +1,23 @@
+
+<div class="group-form">
+  <label for="exampleInputEmail1">Job Status:</label><br/>
+
+  <select name="status">
+    {% for stat in status %}
+    {% if stat.0 == job.status %}
+    <option name="status" value="{{ stat.0 }}" selected="selected">{{ stat.1 }}</option>
+    {% else %}
+    <option name="status" value="{{ stat.0 }}">{{ stat.1 }}</option>
+    {% endif %}
+    {% endfor %}
+  </select>
+</div>
+
+<div class="form-group">
+  <label>Job Description:</label>
+  <input type="text" class="form-control" name="description" value="{{ job.description }}">
+  <label>More Description:</label>
+  <input type="text" class="form-control"  name="description_more" value="{{ job.description_more }}">
+</div>
+<label>Finish by:</label>
+<input type="text" class="form-control" name="date" placeholder="{{ job.date_of_completion }}">
